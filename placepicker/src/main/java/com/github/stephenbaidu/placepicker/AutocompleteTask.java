@@ -82,8 +82,16 @@ public class AutocompleteTask extends AsyncTask<String, Void, List<PlaceInfo>> {
             for (int i = 0; i < predsJsonArray.length(); i++) {
                 JSONObject place = predsJsonArray.getJSONObject(i);
                 String id = place.getString("place_id");
-                String name = place.getString("description").split(", ", 2)[0];
-                String description = place.getString("description").split(", ", 2)[1];
+                String descriptionFull = var24.getString("description");
+                String name, description;
+
+                if(descriptionFull.contains(",")) {
+                    name = var24.getString("description").split(", ", 2)[0];
+                    description = var24.getString("description").split(", ", 2)[1];
+                } else {
+                    name = descriptionFull;
+                    description = "";
+                }
 
                 resultList.add(new PlaceInfo(id, name, description));
             }
