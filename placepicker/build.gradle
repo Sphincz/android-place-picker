@@ -2,11 +2,11 @@ apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.0"
-group = "com.github.stephenbaidu"
+version = "1.1"
+group = "com.github.sphincz"
 
-def siteUrl = 'https://github.com/stephenbaidu/android-place-picker'
-def gitUrl = 'https://github.com/stephenbaidu/android-place-picker.git'
+def siteUrl = 'https://github.com/Sphincz/android-place-picker'
+def gitUrl = 'https://github.com/Sphincz/android-place-picker.git'
 
 ext {
     PUBLISH_GROUP_ID = group
@@ -15,12 +15,12 @@ ext {
 }
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
-        minSdkVersion 10
-        targetSdkVersion 21
+        minSdkVersion 9
+        targetSdkVersion 22
         versionCode 1
         versionName version
     }
